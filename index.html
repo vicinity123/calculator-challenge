@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="styles.css">  
+  <title>Calculator app</title>
+</head>
+<body>
+
+    <header class="brand">
+      <h2 class="brand-display">calc</h2>
+      
+      <div class="theme">
+        <h5 class="theme-display">THEME</h5>
+        <div class="theme-option">
+          <div class="theme-toggle"></div>
+        </div>
+      </div>
+    </header>
+
+  <main class="container">
+
+    <!-- CALCULATOR ANSWER DISPLAY -->
+    <section class="ans-display">
+      <p data-prev-display class="prev-calc-display"></p>
+      <p data-curr-display class="curr-calc-display"></p>
+    </section> <!-- /.answer-display -->
+
+    <!-- CALCULATOR KEYPAD DISPLAY -->
+    <section class="btn-display">
+      <!-- NUMBER BUTTONS -->
+      <button type="button" data-num-btn class="num-btn num-1">1</button>
+      <button type="button" data-num-btn class="num-btn num-2">2</button>
+      <button type="button" data-num-btn class="num-btn num-3">3</button>
+      <button type="button" data-num-btn class="num-btn num-4">4</button>
+      <button type="button" data-num-btn class="num-btn num-5">5</button>
+      <button type="button" data-num-btn class="num-btn num-6">6</button>
+      <button type="button" data-num-btn class="num-btn num-7">7</button>
+      <button type="button" data-num-btn class="num-btn num-8">8</button>
+      <button type="button" data-num-btn class="num-btn num-9">9</button>
+      <button type="button" data-num-btn class="num-btn num-0">0</button>
+
+      <!-- OPERATOR BUTTONS -->
+      <button type="button" data-operator class="num-btn plus">+</button>
+      <button type="button" data-operator class="num-btn minus">-</button>
+      <button type="button" data-operator class="num-btn times">x</button>
+      <button type="button" data-operator class="num-btn divide">/</button>
+      <button type="button" data-decimal class="num-btn decimal">.</button>
+
+      <!-- OTHER FUNCTION BUTTONS -->
+      <button type="button" data-delete class="num-btn delete-btn">DEL</button>
+      <button type="button" data-reset class="num-btn reset-btn">RESET</button>
+      <button type="button" data-equals class="num-btn equals-btn">&equals;</button>
+    </section> <!-- /.button-display -->
+
+  </main> <!-- /.container -->
+
+
+  <script src="script.js">
+    
+  </script>
+
+</body>
+</html>

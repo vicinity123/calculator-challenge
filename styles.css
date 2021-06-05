@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@600;700&display=swap");
+:root {
+  /*GENERAL FONT*/
+  --ff-primary: Spartan, sans-serif;
+  /*THEME 1 - COLORS*/
+  --main-bkgd-blue: hsl(222, 26%, 31%);
+  --tgle-kpad-blue: hsl(223, 31%, 20%);
+  --screen-bkgd-blue: hsl(224, 36%, 15%);
+  --key-bkgd-blue: hsl(225, 21%, 49%);
+  --key-shdw-blue: hsl(224, 28%, 35%);
+  --key-tgle-red: hsl(6, 63%, 50%);
+  --key-shdw-dk-red: hsl(6, 70%, 34%);
+  --key-bkgd-org-gray: hsl(30, 25%, 89%);
+  --key-shdw-org-gray: hsl(28, 16%, 65%);
+  --dk-gray-blue: hsl(221, 14%, 31%);
+  /* Variable (clr-white) with hsl(0, 0, 100%) doesn't work.
+        Shows black color but works with rgba(255, 255, 255, 1)*/
+  --clr-white: rgba(255, 255, 255, 1);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--main-bkgd-blue);
+  font-family: var(--ff-primary);
+  font-size: 2rem;
+  margin: 8%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+header .brand-display {
+  font-size: 1.8rem;
+  color: var(--clr-white);
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  margin-left: 0.15rem;
+}
+
+header .theme {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
+  margin-left: 7.5rem;
+}
+
+header .theme .theme-display {
+  font-size: 0.65rem;
+  font-weight: 300;
+  word-spacing: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .theme .theme-option {
+  background: var(--tgle-kpad-blue);
+  width: 3.8rem;
+  height: 1.4rem;
+  border-radius: 0.85rem;
+  margin-left: 1rem;
+}
+
+header .theme .theme-option::before {
+  content: '1 2 3';
+  display: block;
+  color: var(--clr-white);
+  font-size: 0.65rem;
+  text-align: center;
+  margin: 0.5rem;
+  -webkit-transform: translateY(-1.55rem);
+          transform: translateY(-1.55rem);
+  font-weight: lighter;
+  word-spacing: 0.6rem;
+}
+
+header .theme .theme-option::after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  -webkit-transform: translateY(-1.6rem) translateX(0.25rem);
+          transform: translateY(-1.6rem) translateX(0.25rem);
+  width: 0.93rem;
+  height: 0.93rem;
+  background-color: var(--key-tgle-red);
+}
+
+main {
+  height: auto;
+}
+
+main section.ans-display {
+  background: var(--screen-bkgd-blue);
+  width: 100%;
+  height: 5.65rem;
+  border-radius: 0.7rem;
+  margin-bottom: 5%;
+  padding: 1.15rem 1.2rem;
+}
+
+main section.ans-display .prev-calc-display {
+  font-size: 1.65rem;
+  color: var(--clr-white);
+  text-align: right;
+}
+
+main section.ans-display .curr-calc-display {
+  font-size: 1.65rem;
+  color: var(--clr-white);
+  text-align: right;
+}
+
+main section.btn-display {
+  background: var(--tgle-kpad-blue);
+  width: 100%;
+  height: 22rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "num7 num8 num9 delete" "num4 num5 num6 plus" "num1 num2 num3 minus" "decimal num0 divide times" "reset reset equals equals";
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 4%;
+  grid-row-gap: 4%;
+  justify-items: center;
+  padding: 6.5%;
+  border-radius: 0.5rem;
+}
+
+main section.btn-display .num-btn {
+  background: var(--key-bkgd-org-gray);
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dk-gray-blue);
+  width: 100%;
+  height: 3.25rem;
+  border: none;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 0 3px 0 0 var(--key-shdw-org-gray);
+          box-shadow: 0 3px 0 0 var(--key-shdw-org-gray);
+  padding: 0.85rem;
+  text-align: center;
+}
+
+main section.btn-display .num-btn:active {
+  outline: none;
+  background: rgba(234, 227, 220, 0.88);
+}
+
+main section.btn-display .num-1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: num1;
+}
+
+main section.btn-display .num-2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: num2;
+}
+
+main section.btn-display .num-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: num3;
+}
+
+main section.btn-display .num-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: num4;
+}
+
+main section.btn-display .num-5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: num5;
+}
+
+main section.btn-display .num-6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: num6;
+}
+
+main section.btn-display .num-7 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: num7;
+}
+
+main section.btn-display .num-8 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: num8;
+}
+
+main section.btn-display .num-9 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: num9;
+}
+
+main section.btn-display .num-0 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: num0;
+}
+
+main section.btn-display .plus {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: plus;
+}
+
+main section.btn-display .subtract {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: minus;
+}
+
+main section.btn-display .times {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: times;
+}
+
+main section.btn-display .divide {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: divide;
+}
+
+main section.btn-display .decimal {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: decimal;
+}
+
+main section.btn-display .reset-btn {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: reset;
+  background: var(--key-bkgd-blue);
+  color: var(--clr-white);
+  font-size: 1.05rem;
+  -webkit-box-shadow: 0 3px 0 0 var(--key-shdw-blue);
+          box-shadow: 0 3px 0 0 var(--key-shdw-blue);
+}
+
+main section.btn-display .reset-btn:active {
+  outline: none;
+  background: rgba(99, 112, 151, 0.88);
+}
+
+main section.btn-display .delete-btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: delete;
+  background: var(--key-bkgd-blue);
+  color: var(--clr-white);
+  font-size: 1.05rem;
+  -webkit-box-shadow: 0 3px 0 0 var(--key-shdw-blue);
+          box-shadow: 0 3px 0 0 var(--key-shdw-blue);
+}
+
+main section.btn-display .delete-btn:active {
+  outline: none;
+  background: rgba(99, 112, 151, 0.88);
+}
+
+main section.btn-display .equals-btn {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: equals;
+  background: var(--key-tgle-red);
+  color: var(--clr-white);
+  font-size: 1.05rem;
+  -webkit-box-shadow: 0 3px 0 0 var(--key-shdw-dk-red);
+          box-shadow: 0 3px 0 0 var(--key-shdw-dk-red);
+}
+
+main section.btn-display .equals-btn:active {
+  outline: none;
+  background: rgba(208, 63, 47, 0.88);
+}
+/*# sourceMappingURL=styles.css.map */
